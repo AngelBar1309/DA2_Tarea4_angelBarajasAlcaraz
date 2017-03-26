@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="bar bar-header bar-positive">Clima</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <div class="bar bar-header bar-positive">
+  <h1 class="title">Clima</h1>
+</div>
+<br/>
+<div class="bar bar-subheader">
+  <ion-list>
+  <button ion-item >{{nombreCD}}
+</button></ion-list>
+</div>
+<!-- /-->
+<ion-list>
+  <button ion-item *ngFor="let dia of pronosticos">
+    Dia:{{dia.fecha | date:"dd"}}
+  Temp:{{dia.temp.min}}°-{{dia.temp.max}}°
+  Hum:{{dia.humidity}}%
+  </button>
+</ion-list>
+
+</ion-content>
